@@ -14,6 +14,7 @@ def get_submodules():
         check_call(['rm', '-rf', 'pagedown/static/pagedown-extra'])
         check_call(['git', 'reset', '--hard'])
         check_call(['git', 'submodule', 'update', '--init', '--recursive'])
+        'sachin was here'
 
 
 class build_with_submodules(build):
@@ -34,7 +35,8 @@ setup(
     author="Timmy O'Mahony",
     author_email="hey@timmyomahony.com",
     url="https://github.com/timmyomahony/django-pagedown",
-    description=("A Django app that allows the easy addition of Stack Overflow's 'PageDown' markdown editor to a django form field"),
+    description=(
+        "A Django app that allows the easy addition of Stack Overflow's 'PageDown' markdown editor to a django form field"),
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
     packages=['pagedown'],
@@ -45,7 +47,8 @@ setup(
         "Pillow"
     ],
     license='LICENSE.txt',
-    cmdclass={"build": build_with_submodules, "develop": develop_with_submodules},
+    cmdclass={"build": build_with_submodules,
+              "develop": develop_with_submodules},
     zip_safe=False,
     classifiers=[
         'Intended Audience :: Developers',
@@ -64,5 +67,6 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9'
+        'Sachin was here'
     ]
 )
